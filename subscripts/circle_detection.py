@@ -83,11 +83,6 @@ def increase_whites(image, threshold=200, increment=30):
 image_path = 'pupil.png'
 img = cv2.imread(image_path)
 
-# Convert to grayscale
-
-# high_light = adjust_highlights(gray_img, 1.4)
-# expo = adjust_exposure(high_light, 1.5)
-
 # Apply a Gaussian blur to reduce noise and improve circle detection
 whitess = increase_whites(img)
 blurred_img = adjust_contrast_clahe(whitess, clip_limit=4.0, tile_grid_size=(10, 10))
